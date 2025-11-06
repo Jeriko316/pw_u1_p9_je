@@ -136,10 +136,28 @@ function fundamentosJs(){
     const profesor = {
         nombre:'Ericko', 
         apellido: 'Enriqu',
-        edad:36,
+        edad:35,
         ecuatoriano: true,
         genero: 'M',
         ciudad: 'New York'
     }
     console.log(profesor);
+    console.log(profesor.apellido);
+    profesor.apellido='CAÑARROIS'
+    console.log(profesor);
+
+    if(profesor.ciudad === 'Quito'){
+        console.log('Es quiteño');
+    }
+
+    if(profesor.edad !== 36){
+        console.log('Es diferente de 36');
+    }else{
+        console.log('Es 36');
+    }
+
+    for(let clave in profesor){
+        console.log(clave);
+        console.log(profesor[clave]);
+    }
 }
