@@ -160,4 +160,129 @@ function fundamentosJs(){
         console.log(clave);
         console.log(profesor[clave]);
     }
+
+    //destructuracion//
+    /*es un forma sencilla y practica de extraer valores de un objeto o un arreglo y 
+    asignarlo a variables individuales */
+
+    //destrucutracion de arreglos
+
+    //decalramos el objeto 
+    const e1 = {
+        nombre:'Ericko', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York'
+    }
+
+    const e2 = {
+        nombre:'Ericko', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York'
+    }
+
+    const arregloEstudiantes = [e1,e2,{
+        nombre:'Ericko 3', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York'
+    } ];
+    console.log(arregloEstudiantes[0]);
+    console.log(arregloEstudiantes[2]);
+
+    //ahora si la destrucuracion de arreglos
+    const ar1=[1,2,3,4,5,6,7];
+    const [p1,p2,p3,p4,p5] = ar1; //la guia apra destrcuraR ES LA POSICION
+    console.log(p1);
+    console.log(p5);
+
+    const [primero,,,,,, ultimo] = ar1;
+    console.log(primero);
+    console.log(ultimo);
+
+
+    //lo mismo pero en un solo paso 
+    const [pos1, pos2] = [1,2,3,4,5,6,7];
+    imprime(ar1);
+
+    //Para Objetos
+
+    const e3 = {
+        nombre:'Ericko', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York'
+    }
+    //lado izquiedo lo q se destrucura = lado derecho el objeto
+    const {nombre: nombre1, ciudad}            =           e3;
+    console.log(nombre1);
+    console.log(ciudad);
+
+    const{nombre: n, ciudad: ciu} = {
+       nombre:'Ericko', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York'
+    };
+
+    console.log(n);
+    console.log(ciu);
+
+     const e4 = {
+        nombre:'Ericko', 
+        apellido: 'Enriqu',
+        edad:35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'New York',
+        direccion: {
+          calle: "Av. America",
+          barrio: "la gasca",
+          numeracion: "2343"
+        }
+    }
+
+    console.log(e4.direccion);
+    console.log(e4.direccion.numeracion);
+
+    //Destructuracion a un objeto q tiene atribjutos objetos
+    const {edad: ed, direccion} = e4;
+    console.log(ed);
+    console.log(direccion);
+
+    const {calle} = direccion;
+    console.log(calle);
+
+    //ahora en un solo paso la destructraciond e un bojeto como atributo
+    const {direccion: {barrio,calle:c1,numeracion}} = e4;
+    console.log(barrio);
+    console.log(c1);
+    console.log(numeracion);
+
+    
+
 }
+
+
+function imprime(arreglo){
+  console.log(arreglo);
+}
+
+//esta es otra forma de lo mismo de arriba 
+/*function imprime([a,b,c]){
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}*/
+
