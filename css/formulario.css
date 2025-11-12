@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+
+}
+
+/*habilite el contenido del atributo type*/
+p:before {
+    content: attr(type);
+    display: block;
+}
