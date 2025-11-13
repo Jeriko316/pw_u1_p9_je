@@ -16,4 +16,12 @@ body {
 p:before {
     content: attr(type);
     display: block;
+    font-size: bold;
+    
+}
+
+input {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid white;
 }
