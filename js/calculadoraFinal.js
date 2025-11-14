@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let currentExpression = '';  // Guarda toda la expresión (ej: "7+2*3")
 let resetDisplay = false;
 
@@ -31,7 +30,7 @@ function clearDisplay() {
     display.innerText = '';
     currentExpression = '';
     resetDisplay = false;
-=======
+
 
 let number1 = '';
 let number2 = '';
